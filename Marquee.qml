@@ -30,6 +30,7 @@ Rectangle {
             loops: Animation.Infinite
             to: -marqueeText.width
             running: shouldScroll
+            paused: mouse.hovered
             target: marqueeText
             from: marquee.width
             property: 'x'
@@ -38,5 +39,10 @@ Rectangle {
         Component.onCompleted: {
             marqueeText.lineLaidOut.connect((_) => marqueeText.x = 0)
         }
+    }
+
+    HoverHandler {
+        id: mouse
+        acceptedDevices: PointerDevice.AllDevices
     }
 }
