@@ -12,21 +12,32 @@ Rectangle {
     Marquee {
         anchors.centerIn: parent
 
+        anchors.rightMargin: 10
+
         message: ""
         id: body
 
         color: "transparent"
 
         height: 24
-        width: notifications.width
+        width: notifications.width - 20
+    }
+
+    TapHandler {
+        id: tap
+    }
+
+    function clear() {
+        body.message = ""
     }
 
     Component.onCompleted: {
         server.notification.connect(rx)
+        tap.tapped.connect(clear)
     }
 
     function rx(n) {
         body.message = n.body
-        n.closed.connect((_) => body.message = "")
+        n.closed.connect(clear)
     }
 }
