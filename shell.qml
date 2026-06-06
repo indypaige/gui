@@ -11,7 +11,7 @@ ShellRoot {
             left: true
         }
 
-        height: 48
+        implicitHeight: 48
 
         margins.bottom: 5
 
@@ -27,9 +27,10 @@ ShellRoot {
             left: true
         }
 
-        height: 64
+        implicitHeight: 64
 
         margins.bottom: 5
+
 
         Rectangle {
             anchors.centerIn: parent
