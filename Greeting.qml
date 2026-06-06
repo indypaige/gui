@@ -18,6 +18,6 @@ Rectangle {
         font.family: "Iosevka"
         font.pointSize: 14
         text: greeting.msg
-        color: "#232634"
+        color: "#c6d0f5"
     }
 }

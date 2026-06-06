@@ -17,7 +17,7 @@ Rectangle {
         topPadding: 10
 
         Notifications {
-            color: "#737994"
+            color: "#414559"
             height: 38
             width: 200
             radius: 6
@@ -31,7 +31,7 @@ Rectangle {
         topPadding: 10
 
         Rectangle {
-            color: "#737994"
+            color: "#414559"
             height: 38
             width: 400
             radius: 6
