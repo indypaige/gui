@@ -9,7 +9,8 @@ Text {
         readonly property var adapter: Bluetooth.defaultAdapter
     }
 
-    color: "#232634"
-
     text: bluetooth.adapter.enabled ? "󰂯" : "󰂲"
+    font.family: "Iosevka"
+    font.pointSize: 14
+    color: "#232634"
 }

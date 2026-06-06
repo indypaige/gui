@@ -2,12 +2,7 @@ import Quickshell.Networking
 import Quickshell
 import QtQuick
 
-Rectangle {
-    color: "transparent"
-
-    height: 18
-    width: 18
-
+Text {
     Scope {
         id: network
 
@@ -38,13 +33,10 @@ Rectangle {
                 return "󰢤";
             }
         }
-   }
-
-    Text {
-        anchors.centerIn: parent
-        font.family: "Iosevka"
-        font.pointSize: 14
-        text: network.icon
-        color: "#232634"
     }
+
+    font.family: "Iosevka"
+    font.pointSize: 14
+    text: network.icon
+    color: "#232634"
 }

@@ -19,7 +19,7 @@ Rectangle {
         Notifications {
             color: "#414559"
             height: 38
-            width: 200
+            width: 220
             radius: 6
         }
     }
@@ -39,6 +39,22 @@ Rectangle {
             height: parent.height
 
             layoutDirection: Qt.RightToLeft
+
+            rightPadding: width / 4
+
+            spacing: 10
+
+            Bluetooth {
+                anchors.verticalCenter: parent.verticalCenter
+            }
+
+            Network {
+                anchors.verticalCenter: parent.verticalCenter
+            }
+
+            Battery {
+                anchors.verticalCenter: parent.verticalCenter
+            }
         }
 
         Rectangle {
@@ -61,6 +77,8 @@ Rectangle {
 
             width: (parent.width - greeting.width) / 2
             height: parent.height
+
+            spacing: 10
         }
     }
 }
