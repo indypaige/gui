@@ -1,7 +1,7 @@
 import Quickshell
 import QtQuick
 
-Rectangle {
+Text {
     Scope {
         id: greeting
 
@@ -13,11 +13,8 @@ Rectangle {
         readonly property var msg: Qt.formatDateTime(clock.date, "ddd, MMM dd, yyyy")
     }
 
-    Text {
-        anchors.centerIn: parent
-        font.family: "Iosevka"
-        font.pointSize: 14
-        text: greeting.msg
-        color: "#c6d0f5"
-    }
+    font.family: "Iosevka"
+    font.pointSize: 14
+    text: greeting.msg
+    color: "#c6d0f5"
 }

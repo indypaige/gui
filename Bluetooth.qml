@@ -2,23 +2,14 @@ import Quickshell.Bluetooth
 import Quickshell
 import QtQuick
 
-Rectangle {
-    color: "transparent"
-
-    height: 18
-    width: 18
-
+Text {
     Scope {
         id: bluetooth
 
         readonly property var adapter: Bluetooth.defaultAdapter
     }
 
-    Text {
-        anchors.centerIn: parent
+    color: "#232634"
 
-        color: "black"
-
-        text: bluetooth.adapter.enabled ? "󰂯" : "󰂲"
-    }
+    text: bluetooth.adapter.enabled ? "󰂯" : "󰂲"
 }

@@ -24,21 +24,43 @@ Rectangle {
         }
     }
 
-    Row {
+    Rectangle {
         anchors.centerIn: parent
 
-        bottomPadding: 10
-        topPadding: 10
+        height: 38
+        width: 400
+        radius: 6
+
+        color: "#414559"
+
+        Row {
+            anchors.verticalCenter: parent.verticalCenter
+            width: (parent.width - greeting.width) / 2
+            height: parent.height
+
+            layoutDirection: Qt.RightToLeft
+        }
 
         Rectangle {
-            color: "#414559"
-            height: 38
-            width: 400
-            radius: 6
+            id: greeting
+
+            anchors.centerIn: parent
+            width: parent.width / 2.5
+            height: parent.height
+            color: "transparent"
 
             Greeting {
                 anchors.centerIn: parent
+                width: parent.width
             }
+        }
+
+        Row {
+            anchors.verticalCenter: parent.verticalCenter
+            anchors.right: parent.right
+
+            width: (parent.width - greeting.width) / 2
+            height: parent.height
         }
     }
 }
