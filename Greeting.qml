@@ -2,11 +2,6 @@ import Quickshell
 import QtQuick
 
 Rectangle {
-    color: "transparent"
-
-    height: 18
-    width: 160
-
     Scope {
         id: greeting
 
