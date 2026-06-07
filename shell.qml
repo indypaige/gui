@@ -1,8 +1,12 @@
+//@ pragma UseQApplication
+
 import Quickshell
 import QtQuick
 
 ShellRoot {
     PanelWindow {
+        id: topBar
+
         color: "transparent"
 
         anchors {

@@ -40,7 +40,7 @@ Rectangle {
 
             layoutDirection: Qt.RightToLeft
 
-            rightPadding: width / 4
+            rightPadding: width / 5
 
             spacing: 10
 
@@ -71,14 +71,28 @@ Rectangle {
             }
         }
 
-        Row {
+        Rectangle {
             anchors.verticalCenter: parent.verticalCenter
             anchors.right: parent.right
 
             width: (parent.width - greeting.width) / 2
             height: parent.height
 
-            spacing: 10
+            color: "transparent"
+
+            Time {
+                anchors.centerIn: parent
+            }
         }
+    }
+
+    Tray {
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: parent.right
+
+        color: "#414559"
+        height: 38
+        width: 220
+        radius: 6
     }
 }
