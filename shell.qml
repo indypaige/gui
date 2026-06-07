@@ -23,6 +23,8 @@ ShellRoot {
     }
 
     PanelWindow {
+        id: bottomBar
+
         color: "transparent"
 
         anchors {
